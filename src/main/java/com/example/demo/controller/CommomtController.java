@@ -1,9 +1,12 @@
 package com.example.demo.controller;
 
+import com.example.demo.common.ModelUtils;
 import com.example.demo.model.Greeting;
+import com.example.demo.model.Order;
 import com.example.demo.model.User;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
 
 /**
@@ -12,7 +15,7 @@ import java.util.concurrent.atomic.AtomicLong;
  * @date:yyyy/mm/dd
  */
 @RestController
-public class UserController {
+public class CommomtController {
     private User user = new User();
     private final AtomicLong counter = new AtomicLong();
     private static final String template = "Hello %s";
@@ -31,5 +34,15 @@ public class UserController {
     public Greeting greting(@RequestParam(value = "name", defaultValue = "World") String name) {
         return new Greeting(counter.incrementAndGet(), String.format(template, name));
     }
+
+    /**
+     * @return
+     */
+    @GetMapping("/sell/buyer/product/list")
+    public List<Order> getFoods(){
+        List<Order> list=ModelUtils.getOrder();
+        return list;
+    }
+
 
 }
