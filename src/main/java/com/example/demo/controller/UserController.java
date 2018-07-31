@@ -31,7 +31,5 @@ public class UserController {
     public Greeting greting(@RequestParam(value = "name", defaultValue = "World") String name) {
         return new Greeting(counter.incrementAndGet(), String.format(template, name));
     }
-    public void jj(){
 
-    }
 }
