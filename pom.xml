@@ -38,13 +38,27 @@
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
         </dependency>
+        <!-- <dependency>
+             <groupId>org.slf4j</groupId>
+             <artifactId>slf4j-api</artifactId>
+             <version>1.8.0-alpha2</version>
+         </dependency>-->
+        <!-- <dependency>
+             <groupId>org.springframework.boot</groupId>
+             <artifactId>spring-boot-starter-logging</artifactId>
+         </dependency>-->
+        <dependency>
+            <groupId>org.apache.ant</groupId>
+            <artifactId>ant</artifactId>
+            <version>1.8.1</version>
+        </dependency>
     </dependencies>
 
     <scm>
-    <url>https://github.com/EvanYaoQiHui/first.git</url>
-    <connection>scm:git:https://github.com/EvanYaoQiHui/first.git</connection>
-    <developerConnection>scm:git:https://github.com/EvanYaoQiHui/first.git</developerConnection>
-</scm>
+        <url>https://github.com/EvanYaoQiHui/first.git</url>
+        <connection>scm:git:https://github.com/EvanYaoQiHui/first.git</connection>
+        <developerConnection>scm:git:https://github.com/EvanYaoQiHui/first.git</developerConnection>
+    </scm>
     <build>
         <plugins>
             <plugin>
@@ -74,7 +88,6 @@
                     <goals>-f pom.xml deploy</goals>
                 </configuration>
             </plugin>
-
         </plugins>
     </build>
 </project>
